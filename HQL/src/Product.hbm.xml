@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping> 
+   <class name="domain.Product" table="products">  
+        
+<id name="productId" column="pid">
+ <generator class="increment"></generator>
+</id> 
+
+<property name="proName" column="pname" length="10"/>
+<property name="price"/>
+</class> 
+    
+    
+<query name="HQLQuery">
+    <![CDATA[from Product p where p.productId = :param1]]>
+</query>
+
+<sql-query name="SQLQuery">
+    select * from Test.PRODUCTS
+</sql-query>
+
+</hibernate-mapping>

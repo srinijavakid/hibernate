@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="domain.Product" table="PRODUCTS">
+		<id name="productId" column="pid">
+			<generator class="increment" />
+		</id>
+		<property name="proName" column="pname" length="10" />
+		<property name="price" />
+	</class>
+	<!--
+		http://www.javatpoint.com/generator-classes assigned, increment,
+		sequence, hilo, native, identity,seqhilo, uuid, guid, select, foreign,
+		sequence-identity
+	-->
+</hibernate-mapping>
